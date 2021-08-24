@@ -1,3 +1,5 @@
+%INCOMPLETE%
+
 clc;
 syms x;
 
@@ -13,13 +15,16 @@ else
     disp('Initial guesses are wrong')
 end
 
-i = 0;
+i = 1;
 c = zeros();
 ll = zeros();
 ul = zeros();
 it = zeros();
 
-while abs(f(a) - f(b)) > tol
+c(i) = (a + b) / 2;
+it(i) = i;
+
+while abs(f(c(i))) > tol
 
     i = i + 1;
     it(i) = i;
