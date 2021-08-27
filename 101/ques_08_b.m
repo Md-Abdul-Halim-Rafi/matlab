@@ -4,7 +4,7 @@ predict_year = 1995;
 
 linear_int = polyfit(year, pop, 1);
 sp_int = spline(year, pop, year);
-f = polyval(linear_sp,year);
+f = polyval(linear_int,year);
 
 Linear = interp1(year, pop, predict_year);
 Spline = spline(year, pop, predict_year);
